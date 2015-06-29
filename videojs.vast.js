@@ -255,11 +255,11 @@
         player.loadingSpinner.el().style.display = "none";
         var timeLeft = Math.ceil(settings.skip - player.currentTime());
         if(timeLeft > 0) {
-          player.vast.skipButton.innerHTML = "Skip in " + timeLeft + "...";
+          player.vast.skipButton.innerHTML = player.localize("Skip in") + " " + timeLeft + "...";
         } else {
           if((' ' + player.vast.skipButton.className + ' ').indexOf(' enabled ') === -1){
             player.vast.skipButton.className += " enabled";
-            player.vast.skipButton.innerHTML = "Skip";
+            player.vast.skipButton.innerHTML = player.localize("Skip");
           }
         }
       }
